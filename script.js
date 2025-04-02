@@ -1,6 +1,3 @@
-// write function getComputerChoice
-// getComputerChoice return random String("Rock"or "Paper " or "Scissors")
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -36,14 +33,39 @@ function playRound(humanChoice, computerChoice) {
     humanScore++;
     console.log(`You win! ${humanChoice} beats ${computerChoice}`);
   } else {
-    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     computerScore++;
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
   }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+  let humanSelection = getHumanChoice();
+  let computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
 
-playRound(humanSelection, computerSelection);
-console.log(humanScore);
-console.log(computerScore);
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  if (humanScore > computerScore) {
+    console.log("You are the total winner!");
+  } else if (humanScore < computerScore) {
+    console.log("Computer is the total winner!");
+  } else {
+    console.log("Nobody is the total winner!");
+  }
+}
+
+playGame();
