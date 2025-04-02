@@ -1,6 +1,9 @@
 // write function getComputerChoice
 // getComputerChoice return random String("Rock"or "Paper " or "Scissors")
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   let randomNumber = Math.random();
   let randomChoice;
