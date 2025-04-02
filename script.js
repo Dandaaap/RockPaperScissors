@@ -15,3 +15,10 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+  let randomChoice = prompt("What will you play?");
+  return randomChoice;
+}
+
+console.log(getHumanChoice());
